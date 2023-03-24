@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColorMaker.MainPage">
+
+    <ContentPage.Resources>
+        <Color x:Key="Primary">red
+        </Color>
+        <Color x:Key="Secondary">blue
+        </Color>
+        <Color x:Key="Teritirary">green
+        </Color>
+    </ContentPage.Resources>
+    <Frame  CornerRadius="40"
+           VerticalOptions="Center">
+        <StackLayout Spacing="20">
+            
+            <Label Text="Red value:"/>
+            <Slider 
+                x:Name="redSld"
+                MaximumTrackColor="Red"
+                MinimumTrackColor="Orange"
+                IsVisible="true"
+                ValueChanged="redSld_ValueChanged"/>
+            <Label Text="Green value:"/>
+            <Slider 
+                x:Name="greensld"
+                MaximumTrackColor="Red"
+                MinimumTrackColor="Orange"
+                IsVisible="true"
+                ValueChanged="redSld_ValueChanged"/>
+            <Label Text="Blue value:"/>
+            <Slider 
+                x:Name="bluesld"
+                MaximumTrackColor="Red"
+                MinimumTrackColor="Orange"
+                IsVisible="true"
+                ValueChanged="redSld_ValueChanged"/>
+            <Frame>
+                <HorizontalStackLayout Spacing="20">
+                    <Label Text="Hexadecimal value :"
+                           FontAttributes="Bold"
+                           FontSize="Medium"
+                           VerticalOptions="Center"/>
+                    <Button x:Name="Hexval"
+                    BackgroundColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+            </Frame>
+            
+            <Button 
+                   x:Name="Resetbtn"           
+                Text="RESET colors"
+                FontSize="Large"
+                    FontAttributes="Bold"
+                    WidthRequest="150"
+                Clicked="Resetbtn_Clicked"
+                    />
+        </StackLayout>
+    </Frame>
+
+
+
+</ContentPage>
